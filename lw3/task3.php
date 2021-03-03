@@ -2,7 +2,12 @@
 
 header("Content-Type: text/plain");
 
-$password = $_GET["password"];
+function getParameter(string $parameter): ?string
+{
+    return isset($_GET[$parameter]) ? (string)$_GET[$parameter] : null; 
+}
+
+$password = getParameter("password");
 $strength = 0;
 
 $length = strlen($password);

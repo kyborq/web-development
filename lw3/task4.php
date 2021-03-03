@@ -2,10 +2,15 @@
 
 header("Content-Type: text/plain");
 
-$firstName = $_GET["first_name"];
-$lastName = $_GET["last_name"];
-$email = $_GET["email"];
-$age = $_GET["age"];
+function getParameter(string $parameter): ?string
+{
+    return isset($_GET[$parameter]) ? (string)$_GET[$parameter] : null; 
+}
+
+$firstName = getParameter("first_name");
+$lastName = getParameter("last_name");
+$email = getParameter("email");
+$age = getParameter("age");
 
 if (isset($email)) 
 {

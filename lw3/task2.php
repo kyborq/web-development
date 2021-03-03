@@ -2,7 +2,7 @@
 
 header("Content-Type: text/plain");
 
-$identifier = $_GET["identifier"];
+$identifier = getParameter("identifier");
 $valid = true;
 $error = "";
 
