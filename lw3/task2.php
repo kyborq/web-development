@@ -31,3 +31,8 @@ else
 {
 	echo "NO".$error;
 }
+
+function getParameter(string $parameter): ?string
+{
+    return isset($_GET[$parameter]) ? (string)$_GET[$parameter] : null; 
+}

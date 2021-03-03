@@ -2,11 +2,6 @@
 
 header("Content-Type: text/plain");
 
-function getParameter(string $parameter): ?string
-{
-    return isset($_GET[$parameter]) ? (string)$_GET[$parameter] : null; 
-}
-
 $firstName = getParameter("first_name");
 $lastName = getParameter("last_name");
 $email = getParameter("email");
@@ -14,7 +9,7 @@ $age = getParameter("age");
 
 if (isset($email)) 
 {
-	$file = fopen("data/email.txt", "w");
+	$file = fopen("data/{$email}.txt", "w");
 	$data = "FirstName: ".$firstName."\nLastName: ".$lastName."\nEmail: ".$email."\nAge: ".$age;
 	if (fwrite($file, $data)) 
 	{
@@ -29,4 +24,9 @@ if (isset($email))
 else 
 {
 	echo "Поле email обязательно";
+}
+
+function getParameter(string $parameter): ?string
+{
+    return isset($_GET[$parameter]) ? (string)$_GET[$parameter] : null; 
 }
