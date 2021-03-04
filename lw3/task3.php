@@ -13,28 +13,28 @@ $repeats = 0;
 
 for ($i = 0; $i < strlen($password); $i++) 
 {
-	if ($password[$i] >= '0' && $password[$i] <= '9') 
-	{
-		$digits += 1;
-	}
+    if ($password[$i] >= '0' && $password[$i] <= '9') 
+    {
+        $digits += 1;
+    }
 
-	if ($password[$i] >= 'A' && $password[$i] <= 'Z') 
-	{
-		$upcase += 1;
-	}
+    if ($password[$i] >= 'A' && $password[$i] <= 'Z') 
+    {
+        $upcase += 1;
+    }
 
-	if ($password[$i] >= 'a' && $password[$i] <= 'z') 
-	{
-		$downcase += 1;
-	}
+    if ($password[$i] >= 'a' && $password[$i] <= 'z') 
+    {
+        $downcase += 1;
+    }
 
-	for ($j = 0; $j < strlen($password); $j++) 
-	{
-		if ($password[$i] === $password[$j] && $i !== $j) 
-		{
-			$repeats += 1;
-		}
-	}
+    for ($j = 0; $j < strlen($password); $j++) 
+    {
+        if ($password[$i] === $password[$j] && $i !== $j) 
+        {
+            $repeats += 1;
+        }
+    }
 }
 
 $strength = 4 * $length;                // к надежности прибавляется число символов в пароле (24)
@@ -45,12 +45,12 @@ $strength += ($length - $downcase) * 2; // к надежности прибав�
 
 if ($upcase === 0 && $downcase === 0 && $digits > 0) 
 {
-	$strength -= $digits;
+    $strength -= $digits;
 }
 
 if (($upcase > 0 || $downcase > 0) && $digits === 0) 
 {
-	$strength -= $upcase - $downcase;
+    $strength -= $upcase - $downcase;
 }
 
 $strength -= $repeats; 
