@@ -55,8 +55,8 @@ if (($upcase > 0 || $downcase > 0) && $digits === 0)
 
 $strength -= $repeats; 
 
-echo "Ваш пароль: ".$password;
-echo "\nПрочность пароля: ".$strength;
+echo "Ваш пароль: " . $password;
+echo "\nПрочность пароля: " . $strength;
 
 function getParameter(string $parameter): ?string
 {
