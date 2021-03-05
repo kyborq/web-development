@@ -29,7 +29,7 @@ if ($valid === true)
 }
 else
 {
-    echo "NO".$error;
+    echo "NO" . $error;
 }
 
 function getParameter(string $parameter): ?string
