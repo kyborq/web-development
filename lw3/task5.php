@@ -42,7 +42,7 @@ if ($data[3])
     $age = $data[3];
 }
 
-echo "FirstName: ".$firstName."\nLastName: ".$lastName."\nEmail: ".$email."\nAge: ".$age; 
+echo "FirstName: " . $firstName . "\nLastName: " . $lastName . "\nEmail: " . $email . "\nAge: " . $age; 
 
 function getParameter(string $parameter): ?string
 {

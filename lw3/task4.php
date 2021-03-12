@@ -10,7 +10,7 @@ $age = getParameter("age");
 if (isset($email)) 
 {
     $file = fopen("data/{$email}.txt", "w");
-    $data = "FirstName: ".$firstName."\nLastName: ".$lastName."\nEmail: ".$email."\nAge: ".$age;
+    $data = "FirstName: " . $firstName . "\nLastName: " . $lastName . "\nEmail: " . $email . "\nAge: " . $age;
     if (fwrite($file, $data)) 
     {
         echo "Файл записан";
