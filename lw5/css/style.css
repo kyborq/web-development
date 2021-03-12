@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+}
+
+.navigation {
+  margin: auto;
+  width: 942px;
+  display: flex;
+}
+
+.link {
+  padding: 15px 23px 14px 44px;
+  font-size: 19px;
+  text-decoration: none;
+  color: #333;
+}
+
+.link::before {
+  content: "";
+}
+
+.link.active {
+  background: #15a98c;
+  color: #fff;
+}
+
+.link.about {
+  background-image: url("../img/about_me_icon-active.png");
+  background-repeat: no-repeat;
+  background-position: 19px 17px;
+}
+
+.link.hobby {
+  background-image: url("../img/hobby_icon.png");
+  background-repeat: no-repeat;
+  background-position: 19px 17px;
+}
+
+.link.films {
+  background-image: url("../img/video_icon.png");
+  background-repeat: no-repeat;
+  background-position: 19px 17px;
+}
