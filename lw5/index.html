@@ -1,19 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <title>Document</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <div class="header">
-      <div class="navigation">
-        <a href="#about" class="link about active">Обо мне</a>
-        <a href="#hobby" class="link hobby">Мое хобби</a>
-        <a href="#films" class="link films">Любимые фильмы</a>
+    <header class="header">
+      <nav class="navigation">
+        <a
+          href="#about"
+          class="navigation__item navigation__item--active navigation__item--about"
+          >Обо мне</a
+        >
+        <a href="#hobby" class="navigation__item navigation__item--hobby"
+          >Мое хобби</a
+        >
+        <a href="#films" class="navigation__item navigation__item--films"
+          >Любимые фильмы</a
+        >
+      </nav>
+    </header>
+
+    <div class="thumbnail">
+      <img src="img/background.png" alt="" class="thumbnail__image" />
+    </div>
+
+    <div class="content">
+      <div class="content__side">
+        <img src="img/picture.png" alt="" class="content__side__picture" />
+
+        <h3 class="content__side__title">Любимые писатели:</h3>
+        <ul class="content__side__list">
+          <li class="content__side__list__item">Айзек Азимов</li>
+          <li class="content__side__list__item">Говард Лафкравт</li>
+          <li class="content__side__list__item">Дмитрий Глуховский</li>
+          <li class="content__side__list__item">Чак Паланик</li>
+        </ul>
+
+        <h3 class="content__side__title">Любимые фильмы:</h3>
+        <ol class="content__side__list">
+          <li class="content__side__list__item">Шоу Трумэна</li>
+          <li class="content__side__list__item">Малхолланд Драйв</li>
+          <li class="content__side__list__item">Семь жизней</li>
+          <li class="content__side__list__item">Гравитация</li>
+        </ol>
+      </div>
+
+      <div class="content__main">
+        <div class="quote">
+          <p class="quote__text">
+            Мы берем на себя много, потому что мало чего боимся
+          </p>
+          <span class="quote__author">— Том Демарко, Deadline</span>
+        </div>
+
+        <h1 class="content__main__header">Jane Doe</h1>
+        <div class="content__main__divider"></div>
+
+        <p class="content__main__text">
+          В 1930-е годы прошлого века физик Джордж Гамоу из университета штата
+          Колорадо начал публиковать мини-сериал рассказов о некоем мистере
+          Томпкинсе, банковском клерке средних лет. Мистер Томпкинс, как
+          явствовало из этих историй, интересовался современной наукой.
+        </p>
+
+        <h2 class="content__main__title">Мое хобби</h2>
+
+        <p class="content__main__text">
+          Он регулярно посещал вечерние лекции местного профессора и,
+          разумеется, всегда засыпал на самом интересном месте. А когда
+          просыпался, то обнаруживал себя в каком-нибудь параллельном мире, где
+          один из основных законов физики действовал не так, как в его мире.
+        </p>
+
+        <a href="#">Напиши мне</a>→
       </div>
     </div>
+
+    <div class="section">
+      <h2 class="content__main__title">Мое хобби</h2>
+    </div>
+
+    <footer class="footer">
+      <p class="footer__text">
+        © 2006-2018 Поволжский государственный технологический университет,
+        ФГБОУ ВО «ПГТУ»
+      </p>
+    </footer>
   </body>
 </html>
