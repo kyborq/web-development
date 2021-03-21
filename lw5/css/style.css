@@ -21,9 +21,9 @@ body
   background-position: 19px 17px;
 }
 
-.navigation__item--active 
+.navigation__item:hover 
 {
-  background: #15a98c;
+  background-color: #15a98c;
   color: #fff;
   background-repeat: no-repeat;
   background-position: 19px 17px;
@@ -46,7 +46,7 @@ body
 
 .thumbnail 
 {
-  z-index: -999;
+  z-index: 0;
 }
 
 .thumbnail__image 
@@ -62,25 +62,23 @@ body
 {
   margin: auto;
   width: 942px;
-  display: flex;
+  overflow: hidden;
 }
 
 .content__side 
 {
   width: 330px;
+  float: left;
+  position: absolute;
+  margin-top: -190px;
+  z-index: 1;
 }
 
 .content__main 
 {
   width: 570px;
-  margin-left: 63px;
-  z-index: 999;
-}
-
-.content__side 
-{
-  margin-top: -190px;
-  z-index: 999;
+  z-index: 1;
+  float: right;
 }
 
 .content__side__picture 
@@ -109,7 +107,7 @@ body
   margin: 0;
 }
 
-.content__side__list__item
+.content__side__list__item 
 {
   margin-bottom: 15px;
 }
@@ -154,29 +152,29 @@ body
 
 .content__main__divider 
 {
-    width: 60px;
-    height: 6px;
-    background-color: #15a98c;
-    border-radius: 3px;
-    margin-bottom: 40px;
+  width: 60px;
+  height: 6px;
+  background-color: #15a98c;
+  border-radius: 3px;
+  margin-bottom: 40px;
 }
 
 .content__main__text 
 {
-    margin: 12px 0 3px;
-    font-size: 20px;
-    line-height: 33px;
-    letter-spacing: 0.4px;
+  margin: 12px 0 3px;
+  font-size: 20px;
+  line-height: 33px;
+  letter-spacing: 0.4px;
 }
 
 .content__main__title 
 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 35px;
-    font-weight: 600;
-    margin-left: -5px;
-    margin-top: 38px;
-    margin-bottom: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  margin-left: -5px;
+  margin-top: 38px;
+  margin-bottom: 12px;
 }
 
 .footer 
@@ -198,12 +196,66 @@ body
 {
   width: 1200px;
   margin: auto;
+  margin-top: 90px;
+  margin-bottom: 72px;
 }
 
 .content__main__link 
 {
-    font-size: 19px;
-    line-height: 32px;
-    color: #15a98b;
-    font-family: "Georgia";
+  font-size: 19px;
+  line-height: 32px;
+  color: #15a98b;
+  font-family: "Georgia";
+}
+
+.movies 
+{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.movies__item 
+{
+  margin: 18px 10px 0 9px;
+}
+
+.movies__item__image 
+{
+  width: 285px;
+  height: 190px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.movies__item__title 
+{
+  font-size: 22px;
+  line-height: 32px;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Open Sans";
+}
+
+.movies__item__description 
+{
+  font-size: 16px;
+  line-height: 28px;
+  color: #555555;
+  font-family: "Georgia";
+}
+
+.movies__button 
+{
+  width: 220px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #15a98c;
+  font-size: 19px;
+  line-height: 32px;
+  color: #f5f5f5;
+  font-family: "Georgia";
+  margin: auto;
+  display: block;
+  cursor: pointer;
 }
