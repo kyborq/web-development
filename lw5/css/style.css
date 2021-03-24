@@ -29,19 +29,34 @@ body
   background-position: 19px 17px;
 }
 
-.navigation__item--about 
+.navigation__item_about 
+{
+  background-image: url("../img/about_me_icon.png");
+}
+
+.navigation__item_about:hover 
 {
   background-image: url("../img/about_me_icon-active.png");
 }
 
-.navigation__item--hobby 
+.navigation__item_hobby 
 {
   background-image: url("../img/hobby_icon.png");
 }
 
-.navigation__item--films 
+.navigation__item_hobby:hover 
+{
+  background-image: url("../img/hobby_icon-active.png");
+}
+
+.navigation__item_films 
 {
   background-image: url("../img/video_icon.png");
+}
+
+.navigation__item_films:hover 
+{
+  background-image: url("../img/video_icon-active.png");
 }
 
 .thumbnail 
@@ -63,15 +78,17 @@ body
   margin: auto;
   width: 942px;
   overflow: hidden;
+  position: relative;
 }
 
 .content__side 
 {
   width: 330px;
   float: left;
-  position: absolute;
+  /*position: absolute; -- поменять на relative*/
   margin-top: -190px;
   z-index: 1;
+  position: relative;
 }
 
 .content__main 
@@ -79,9 +96,10 @@ body
   width: 570px;
   z-index: 1;
   float: right;
+  position: relative;
 }
 
-.content__side__picture 
+.content__picture 
 {
   display: block;
   width: 330px;
@@ -90,7 +108,7 @@ body
   object-fit: cover;
 }
 
-.content__side__title 
+.side__title 
 {
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
@@ -100,14 +118,14 @@ body
   margin-bottom: 20px;
 }
 
-.content__side__list 
+.side__list 
 {
   padding-left: 20px;
   font-size: 19px;
   margin: 0;
 }
 
-.content__side__list__item 
+.list__item 
 {
   margin-bottom: 15px;
 }
@@ -117,7 +135,7 @@ body
   margin-top: -191px;
   z-index: 999;
   line-height: 40px;
-  position: absolute;
+  /*position: absolute; -- добавить родительский блок с relative*/
   width: 505px;
 }
 
@@ -140,7 +158,7 @@ body
   display: block;
 }
 
-.content__main__header 
+.content__header 
 {
   font-size: 48px;
   font-weight: 700;
@@ -150,7 +168,7 @@ body
   margin-bottom: 20px;
 }
 
-.content__main__divider 
+.content__divider 
 {
   width: 60px;
   height: 6px;
@@ -159,7 +177,7 @@ body
   margin-bottom: 40px;
 }
 
-.content__main__text 
+.content__text 
 {
   margin: 12px 0 3px;
   font-size: 20px;
@@ -167,12 +185,11 @@ body
   letter-spacing: 0.4px;
 }
 
-.content__main__title 
+.content__title 
 {
   font-family: "Open Sans", sans-serif;
   font-size: 35px;
   font-weight: 600;
-  margin-left: -5px;
   margin-top: 38px;
   margin-bottom: 12px;
 }
@@ -200,12 +217,23 @@ body
   margin-bottom: 72px;
 }
 
-.content__main__link 
+.content__link 
+{
+  border-bottom: 1px solid #15a98b;
+}
+
+.link 
 {
   font-size: 19px;
   line-height: 32px;
   color: #15a98b;
   font-family: "Georgia";
+  text-decoration: none;
+}
+
+.content__arrow 
+{
+  color: #15a98b;
 }
 
 .movies 
@@ -219,7 +247,7 @@ body
   margin: 18px 10px 0 9px;
 }
 
-.movies__item__image 
+.movies__image 
 {
   width: 285px;
   height: 190px;
@@ -227,7 +255,7 @@ body
   object-fit: cover;
 }
 
-.movies__item__title 
+.movies__title 
 {
   font-size: 22px;
   line-height: 32px;
@@ -236,7 +264,7 @@ body
   font-family: "Open Sans";
 }
 
-.movies__item__description 
+.movies__description 
 {
   font-size: 16px;
   line-height: 28px;
@@ -244,7 +272,7 @@ body
   font-family: "Georgia";
 }
 
-.movies__button 
+.button 
 {
   width: 220px;
   height: 50px;
