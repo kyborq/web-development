@@ -7,7 +7,8 @@ body
 .navigation 
 {
   margin: auto;
-  width: 942px;
+  width: 100%;
+  max-width: 942px;
   display: flex;
 }
 
@@ -17,16 +18,13 @@ body
   font-size: 19px;
   text-decoration: none;
   color: #333;
-  background-repeat: no-repeat;
-  background-position: 19px 17px;
+  background: no-repeat 19px;
 }
 
 .navigation__item:hover 
 {
-  background-color: #15a98c;
   color: #fff;
-  background-repeat: no-repeat;
-  background-position: 19px 17px;
+  background-color: #15a98c;
 }
 
 .navigation__item_about 
@@ -61,9 +59,7 @@ body
 
 .thumbnail 
 {
-  z-index: 0;
-  background: url('../img/background.png');
-  background-size: cover;
+  background: url('../img/background.png') 0/cover;
   height: 400px;
   filter: brightness(0.5);
 }
@@ -80,8 +76,6 @@ body
 {
   margin: auto;
   width: 942px;
-  position: relative;
-  overflow: auto;
 }
 
 .content__side 
@@ -91,15 +85,12 @@ body
   position: relative;
   margin-top: -190px;
   z-index: 1;
-  position: relative;
 }
 
 .content__main 
 {
   width: 550px;
-  z-index: 1;
   float: right;
-  position: relative;
 }
 
 .content__picture 
@@ -113,12 +104,9 @@ body
 
 .side__title 
 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
   color: #15a98c;
-  font-weight: 600;
-  margin-top: 44px;
-  margin-bottom: 20px;
+  margin: 44px 0 20px;
+  font: 600 24px "Open Sans", sans-serif;
 }
 
 .side__list 
@@ -135,51 +123,39 @@ body
 
 .quote 
 {
-  margin-top: -191px;
-  line-height: 40px;
-  margin-bottom: 72px;
+  margin: -191px 0 72px;
+  /* line-height: 40px; */
   position: relative;
-}
-
-.quote__content 
-{
-  top: -200px
 }
 
 .quote__text 
 {
-  font-size: 28px;
-  font-style: italic;
   color: #fff;
-  margin: 0;
-  margin-top: 28px;
+  margin: 28px 0 0;
+  font: italic 28px/40px Georgia, serif;
 }
 
 .quote__author 
 {
-  font-size: 16px;
-  font-family: "Open Sans", sans-serif;
   color: #fff;
   margin-top: 5px;
-  letter-spacing: 0.3px;
+  letter-spacing: .3px;
   display: block;
+  font: 16px/40px "Open Sans", sans-serif;
 }
 
 .content__header 
 {
-  font-size: 48px;
-  font-weight: 700;
   color: #333333;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 33px;
-  margin-bottom: 20px;
+  font: 700 48px "Open Sans", sans-serif;
+  margin: 33px 0 20px;
 }
 
 .content__divider 
 {
   width: 60px;
   height: 6px;
-  background-color: #15a98c;
+  background-color: #15a98c;  
   border-radius: 3px;
   margin-bottom: 40px;
 }
@@ -189,16 +165,13 @@ body
   margin: 12px 0 3px;
   font-size: 20px;
   line-height: 33px;
-  letter-spacing: 0.4px;
+  letter-spacing: .4px;
 }
 
 .content__title 
 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 35px;
-  font-weight: 600;
-  margin-top: 38px;
-  margin-bottom: 12px;
+  font: 600 35px "Open Sans", sans-serif;
+  margin: 38px 0 12px;
 }
 
 .footer 
@@ -209,20 +182,22 @@ body
 
 .footer__text 
 {
-  font-size: 16px;
+  font: 16px/32px Georgia, serif;
   margin: 0;
-  line-height: 32px;
   text-align: center;
   color: #555555;
 }
 
 .section 
 {
-  width: 1200px;
+  width: 100%;
+  margin: 90px 0 72px;
+}
+
+.section__content {
   margin: auto;
-  margin-top: 90px;
-  margin-bottom: 72px;
-  clear: both;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .content__link 
@@ -232,10 +207,8 @@ body
 
 .link 
 {
-  font-size: 19px;
-  line-height: 32px;
   color: #15a98b;
-  font-family: "Georgia";
+  font: 19px/32px "Georgia", serif;
   text-decoration: none;
 }
 
@@ -247,15 +220,16 @@ body
 .movies 
 {
   display: flex;
-  margin-bottom: 30px;
+  margin:  30px 0;
+  justify-content: space-between;
 }
 
 .movies__item 
 {
-  margin: 18px 10px 0 9px;
+  width: 285px;
 }
 
-.movies__image 
+.movie__image 
 {
   width: 285px;
   height: 190px;
@@ -263,21 +237,16 @@ body
   object-fit: cover;
 }
 
-.movies__title 
+.movie__title 
 {
-  font-size: 22px;
-  line-height: 32px;
   color: #333333;
-  font-weight: 700;
-  font-family: "Open Sans";
+  font: 700 22px/32px "Open Sans", sans-serif;
 }
 
-.movies__description 
+.movie__description 
 {
-  font-size: 16px;
-  line-height: 28px;
   color: #555555;
-  font-family: "Georgia";
+  font: 16px/28px "Georgia", serif;
 }
 
 .button 
@@ -287,11 +256,14 @@ body
   border: none;
   border-radius: 5px;
   background-color: #15a98c;
-  font-size: 19px;
-  line-height: 32px;
   color: #f5f5f5;
-  font-family: "Georgia";
+  font: 19px/32px "Georgia", serif;
   margin: auto;
   display: block;
   cursor: pointer;
+}
+
+.clear-fix 
+{
+  clear: both;
 }
