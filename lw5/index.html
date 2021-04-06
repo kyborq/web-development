@@ -60,7 +60,7 @@
       </div>
       <div class="clear-fix"></div>
     </div>
-    <div class="section">
+    <div class="section section_gray">
       <div class="section__content">
         <h2 class="content__title">Любимые фильмы</h2>
         <div class="movies">
@@ -103,7 +103,38 @@
     </div>
     <div class="section">
       <div class="section__content">
-
+        <h2 class="content__title content__title--center">НАПИШИ МНЕ</h2>
+        <form class="form">
+          <div class="form__field field">
+            <label for="name" class="field__label field__label_important">Ваше имя</label>
+            <input type="text" name="name" class="field__input" />
+          </div>
+          <div class="form__field field">
+            <label for="email" class="field__label field__label_important">Ваш email</label>
+            <input type="text" name="email" class="field__input" />
+          </div>
+          <div class="form__field field">
+            <label for="country" class="field__label">Откуда вы?</label>
+            <select name="country" class="field__input field__select">
+              <option>Россия</option>
+              <option>Йошкар-Ола</option>
+            </select>
+          </div>
+          <div class="form__field field form__radio">
+            <label for="gender" class="field__label">Ваш пол</label>
+            <div class="radio-box">
+              <input type="radio" id="gender_male" name="gender" value="Мужской" class="radio-box__item" />
+              <label for="gender_male" class="radio-box__label">Мужской</label>
+              <input type="radio" id="gender_female" name="gender" value="Женский" class="radio-box__item" />
+              <label for="gender_female" class="radio-box__label">Женский</label>
+            </div>
+          </div>
+          <div class="form__field field">
+            <label for="your-message" class="field__label field__label_important">Ваше сообщение</label>
+            <textarea id="your-message" class="field__input field__input_multiline"></textarea>
+          </div>
+          <button class="button form__button">Отправить</button>
+        </form>
       </div>
     </div>
     <footer class="footer">
