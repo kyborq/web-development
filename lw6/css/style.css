@@ -7,7 +7,6 @@ body
 .navigation 
 {
   margin: auto;
-  width: 100%;
   max-width: 942px;
   display: flex;
 }
@@ -67,7 +66,6 @@ body
 .thumbnail__image 
 {
   display: block;
-  width: 100%;
   height: 400px;
   object-fit: cover;
 }
@@ -75,12 +73,12 @@ body
 .content 
 {
   margin: auto;
-  width: 942px;
+  max-width: 942px;
 }
 
 .content__side 
 {
-  width: 330px;
+  max-width: 330px;
   float: left;
   position: relative;
   margin-top: -190px;
@@ -89,7 +87,8 @@ body
 
 .content__main 
 {
-  width: 550px;
+  
+  max-width: 550px;
   float: right;
 }
 
@@ -191,7 +190,7 @@ body
 
 .section 
 {
-  width: 100%;
+  
   margin: 55px 0 32px;
   padding-bottom: 51px;
   overflow: hidden;
@@ -233,7 +232,8 @@ body
 
 .movies__item 
 {
-  width: 285px;
+  
+  max-width: 285px;
 }
 
 .movie__image 
@@ -280,9 +280,12 @@ body
   background: #f9f9f9;
 }
 
+/* FIX THIS LATER!!! */
+
 .content__title--center 
 {
-  width: 300px;
+  
+  max-width: 300px;
   margin: auto;
   text-align: center;
   font-size: 36px;
@@ -320,7 +323,8 @@ body
 .form 
 {
   margin: auto;
-  width: 540px;
+  
+  max-width: 540px;
   margin-top: 68px;
   padding-left: 16px;
 }
@@ -402,4 +406,88 @@ body
 .form__button 
 {
   margin-top: 50px;
+}
+
+@media screen and (min-width: 480px) 
+{
+  .navigation 
+  {
+    flex-wrap: wrap;
+  }
+
+  .quote 
+  {
+    display: none;
+  }
+
+  .content 
+  {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .content__title 
+  {
+    text-align: center;
+  }
+
+  .content__main 
+  {
+    margin: 0 48px;
+  }
+
+  .movies 
+  {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  } 
+
+  .form {
+    padding-left: 0;
+    margin: 68px 32px;
+  }
+
+  .form__button 
+  {
+    margin: auto;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) 
+{
+  .content
+  {
+    flex-direction: row-reverse;
+  }
+
+  .content__title 
+  {
+    text-align: center;
+  }
+
+  .movies
+  {
+    width: 80%;
+    margin: auto;
+  }
+
+  .quote 
+  {
+    display: block;
+  }
+
+  .form 
+  {
+    margin: 68px auto;
+  }
+}
+
+@media screen and (min-width: 1366px) 
+{
+  .movies
+  {
+    width: 100%;
+  }
 }
