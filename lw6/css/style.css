@@ -1,4 +1,4 @@
-body 
+* 
 {
   margin: 0;
   font-family: Georgia, serif;
@@ -9,6 +9,7 @@ body
   margin: auto;
   max-width: 942px;
   display: flex;
+  background: #fff;
 }
 
 .navigation__item 
@@ -56,6 +57,14 @@ body
   background-image: url("../img/video_icon-active.png");
 }
 
+.navigation__item_menu
+{
+  background-image: url(../img/menu-icon.png);
+  background-size: 14px;
+  display: none;
+  padding: 24px;
+}
+
 .thumbnail 
 {
   background: url("../img/background.png") 0 / cover;
@@ -74,6 +83,7 @@ body
 {
   margin: auto;
   max-width: 942px;
+  position: relative;
 }
 
 .content__side 
@@ -95,7 +105,8 @@ body
 .content__picture 
 {
   display: block;
-  width: 330px;
+  max-width: 330px;
+  width: 100%;
   height: 350px;
   border-radius: 5px;
   object-fit: none;
@@ -123,9 +134,8 @@ body
 
 .quote 
 {
-  margin: -191px 0 72px;
-  /* line-height: 40px; */
-  position: relative;
+  position: absolute;
+  top: -192px;
 }
 
 .quote__text 
@@ -203,7 +213,6 @@ body
 {
   margin: auto;
   max-width: 1200px;
-  width: 100%;
 }
 
 .content__link 
@@ -282,7 +291,7 @@ body
 
 /* FIX THIS LATER!!! */
 
-.content__title--center 
+.content__title_center 
 {
   
   max-width: 300px;
@@ -296,7 +305,7 @@ body
   position: relative;
 }
 
-.content__title--center::before 
+.content__title_center::before 
 {
   content: "";
   border-bottom: 1px solid #c4c4c4;
@@ -308,7 +317,7 @@ body
   top: 15px;
 }
 
-.content__title--center::after 
+.content__title_center::after 
 {
   content: "";
   border-bottom: 1px solid #c4c4c4;
@@ -322,11 +331,10 @@ body
 
 .form 
 {
-  margin: auto;
-  
+  margin: 68px auto 0;
   max-width: 540px;
-  margin-top: 68px;
-  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__field 
@@ -375,7 +383,7 @@ body
 
 .form__radio 
 {
-  margin: 40px 0px 32px;
+  margin: 16px 0px 32px;
 }
 
 .radio-box 
@@ -405,53 +413,130 @@ body
 
 .form__button 
 {
-  margin-top: 50px;
+  margin-top: 24px;
 }
 
-@media screen and (min-width: 480px) 
+@media screen and (min-width: 320px) 
 {
-  .navigation 
+  .navigation
   {
     flex-wrap: wrap;
+    position: absolute;
+    top: -1000px;
+    z-index: 99;
+  }
+
+  .navigation_show {
+    top: 48px;
+  }
+
+  .navigation__item_menu 
+  {
+    display: block;
   }
 
   .quote 
   {
-    display: none;
+    top: -220px;
   }
 
   .content 
   {
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
   }
 
-  .content__title 
+  .content__side 
   {
-    text-align: center;
+    margin-top: 40px;
+    max-width: 100%;
+  }
+
+  .content__picture
+  {
+    max-width: 240px;
+    max-height: 240px;
+    margin: auto;
+  }
+
+  .side__container 
+  {
+    display: none;
   }
 
   .content__main 
   {
-    margin: 0 48px;
+    margin: 0 32px;
   }
 
-  .movies 
+  .movies
   {
     flex-wrap: wrap;
-    justify-content: space-around;
-  } 
-
-  .form {
-    padding-left: 0;
-    margin: 68px 32px;
+    justify-content: center;
   }
 
-  .form__button 
+  .movies__item 
   {
-    margin: auto;
-    margin-top: 50px;
+    max-width: 285px;
+    margin-bottom: 30px;
+  }
+
+  .content__title_center::before,
+  .content__title_center::after
+  {
+    display: none;
+  }
+
+  .form
+  {
+    margin: 68px 24px;
+  }
+
+  .section__content
+  {
+    margin: 0 32px;
+  }
+}
+
+@media screen and (min-width: 768px) 
+{
+  .navigation
+  {
+    position: relative;
+    display: flex;
+    top: 0;
+  }
+
+  .navigation__item_menu 
+  {
+    display: none;
+  }
+
+  .content__picture
+  {
+    margin: 0 32px;
+  }
+
+  .content__main
+  {
+    max-width: 100%;
+  }
+
+  .movies
+  {
+    margin: 0 48px;
+    justify-content: space-between;
+  }
+
+  .form 
+  {
+    margin: 68px auto;
+    width: 100%;
+  }
+
+  .section__content 
+  {
+    width: 100%;
   }
 }
 
@@ -460,34 +545,38 @@ body
   .content
   {
     flex-direction: row-reverse;
+    justify-content: center;
   }
 
-  .content__title 
+  .content__main 
   {
-    text-align: center;
+    max-width: 550px;
+    margin: 0 0 0 40px;
   }
 
-  .movies
+  .content__side 
   {
-    width: 80%;
-    margin: auto;
+    top: -130px;
+    margin-top: 0;
   }
 
-  .quote 
+  .side__container 
   {
     display: block;
   }
 
-  .form 
+  .content__picture
   {
-    margin: 68px auto;
+    margin: 0;
   }
 }
 
-@media screen and (min-width: 1366px) 
+@media screen and (min-width: 1366px)
 {
   .movies
   {
-    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0;
   }
 }

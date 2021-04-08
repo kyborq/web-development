@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <nav class="navigation">
+    <header class="header">
+      <span class="navigation__item navigation__item_menu" id="menu-button"></span>
+      <nav class="navigation" id="menu">
         <a href="#about" class="navigation__item navigation__item_about">Обо мне</a>
         <a href="#hobby" class="navigation__item navigation__item_hobby">Мое хобби</a>
         <a href="#films" class="navigation__item navigation__item_films">Любимые фильмы</a>
@@ -43,20 +44,22 @@
       </div>
       <div class="content__side side">
         <img src="img/picture.png" alt="" class="content__picture" />
-        <h3 class="side__title">Любимые писатели:</h3>
-        <ul class="side__list list">
-          <li class="list__item">Айзек Азимов</li>
-          <li class="list__item">Говард Лафкравт</li>
-          <li class="list__item">Дмитрий Глуховский</li>
-          <li class="list__item">Чак Паланик</li>
-        </ul>
-        <h3 class="side__title">Любимые фильмы:</h3>
-        <ol class="side__list list">
-          <li class="list__item">Шоу Трумэна</li>
-          <li class="list__item">Малхолланд Драйв</li>
-          <li class="list__item">Семь жизней</li>
-          <li class="list__item">Гравитация</li>
-        </ol>
+        <div class="side__container">
+          <h3 class="side__title">Любимые писатели:</h3>
+          <ul class="side__list list">
+            <li class="list__item">Айзек Азимов</li>
+            <li class="list__item">Говард Лафкравт</li>
+            <li class="list__item">Дмитрий Глуховский</li>
+            <li class="list__item">Чак Паланик</li>
+          </ul>
+          <h3 class="side__title">Любимые фильмы:</h3>
+          <ol class="side__list list">
+            <li class="list__item">Шоу Трумэна</li>
+            <li class="list__item">Малхолланд Драйв</li>
+            <li class="list__item">Семь жизней</li>
+            <li class="list__item">Гравитация</li>
+          </ol>
+        </div>
       </div>
       <div class="clear-fix"></div>
     </div>
@@ -103,7 +106,7 @@
     </div>
     <div class="section">
       <div class="section__content">
-        <h2 class="content__title content__title--center">НАПИШИ МНЕ</h2>
+        <h2 class="content__title content__title_center">НАПИШИ МНЕ</h2>
         <form class="form">
           <div class="form__field field">
             <label for="name" class="field__label field__label_important">Ваше имя</label>
@@ -140,5 +143,7 @@
     <footer class="footer">
       <p class="footer__text">© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»</p>
     </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
