@@ -1,30 +1,29 @@
 body 
 {
-  margin: 0;
   font-family: Georgia, serif;
+  margin: 0;
 }
 
 .navigation 
 {
-  margin: auto;
-  width: 100%;
-  max-width: 942px;
   display: flex;
+  margin: auto;
+  max-width: 942px;
 }
 
 .navigation__item 
 {
-  padding: 15px 23px 14px 44px;
-  font-size: 19px;
-  text-decoration: none;
-  color: #333;
   background: no-repeat 19px;
+  color: #333;
+  font-size: 19px;
+  padding: 15px 23px 14px 44px;
+  text-decoration: none;
 }
 
 .navigation__item:hover 
 {
-  color: #fff;
   background-color: #15a98c;
+  color: #fff;
 }
 
 .navigation__item_about 
@@ -60,16 +59,16 @@ body
 .thumbnail 
 {
   background: url("../img/background.png") 0 / cover;
-  height: 400px;
   filter: brightness(0.5);
+  height: 400px;
 }
 
 .thumbnail__image 
 {
   display: block;
-  width: 100%;
   height: 400px;
   object-fit: cover;
+  width: 100%;
 }
 
 .content 
@@ -80,41 +79,39 @@ body
 
 .content__side 
 {
-  width: 330px;
   float: left;
-  position: relative;
   margin-top: -190px;
-  z-index: 1;
+  position: relative;
+  width: 330px;
 }
 
 .content__main 
 {
-  width: 550px;
   float: right;
+  width: 550px;
 }
 
 .content__picture 
 {
-  display: block;
-  width: 330px;
-  height: 350px;
   border-radius: 5px;
+  display: block;
+  height: 350px;
   object-fit: none;
   object-position: -174px;
+  width: 330px;
 }
 
 .side__title 
 {
   color: #15a98c;
-  margin: 44px 0 20px;
   font: 600 24px "Open Sans", sans-serif;
+  margin: 44px 0 20px;
 }
 
 .side__list 
 {
-  padding-left: 20px;
   font-size: 19px;
-  margin: 0;
+  padding-left: 20px;
 }
 
 .list__item 
@@ -125,48 +122,47 @@ body
 .quote 
 {
   margin: -191px 0 72px;
-  /* line-height: 40px; */
   position: relative;
 }
 
 .quote__text 
 {
   color: #fff;
-  margin: 28px 0 0;
   font: italic 28px/40px Georgia, serif;
+  margin: 28px 0 0;
 }
 
 .quote__author 
 {
   color: #fff;
-  margin-top: 5px;
-  letter-spacing: 0.3px;
   display: block;
   font: 16px/40px "Open Sans", sans-serif;
+  letter-spacing: 0.3px;
+  margin-top: 5px;
 }
 
 .content__header 
 {
-  color: #333333;
+  color: #333;
   font: 700 48px "Open Sans", sans-serif;
   margin: 33px 0 20px;
 }
 
 .content__divider 
 {
-  width: 60px;
-  height: 6px;
   background-color: #15a98c;
   border-radius: 3px;
+  height: 6px;
   margin-bottom: 40px;
+  width: 60px;
 }
 
 .content__text 
 {
-  margin: 12px 0 3px;
   font-size: 20px;
-  line-height: 33px;
   letter-spacing: 0.4px;
+  line-height: 33px;
+  margin: 12px 0 3px;
 }
 
 .content__title 
@@ -183,21 +179,19 @@ body
 
 .footer__text 
 {
+  color: #555;
   font: 16px/32px Georgia, serif;
   margin: 0;
   text-align: center;
-  color: #555555;
 }
 
 .section 
 {
-  width: 100%;
-  margin: 55px 0 32px;
-  padding-bottom: 51px;
-  overflow: hidden;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 55px 0 32px;
+  padding-bottom: 51px;
 }
 
 .section__content 
@@ -215,7 +209,7 @@ body
 .link 
 {
   color: #15a98b;
-  font: 19px/32px "Georgia", serif;
+  font: 19px/32px Georgia, serif;
   text-decoration: none;
 }
 
@@ -227,8 +221,8 @@ body
 .movies 
 {
   display: flex;
-  margin: 30px 0;
   justify-content: space-between;
+  margin: 30px 0;
 }
 
 .movies__item 
@@ -238,36 +232,35 @@ body
 
 .movie__image 
 {
-  width: 285px;
-  height: 190px;
   border-radius: 5px;
+  height: 190px;
   object-fit: cover;
+  width: 285px;
 }
 
 .movie__title 
 {
-  color: #333333;
+  color: #333;
   font: 700 22px/32px "Open Sans", sans-serif;
 }
 
 .movie__description 
 {
-  color: #555555;
-  font: 16px/28px "Georgia", serif;
+  color: #555;
+  font: 16px/28px Georgia, serif;
 }
 
 .button 
 {
-  width: 220px;
-  height: 50px;
+  background-color: #15a98c;
   border: none;
   border-radius: 5px;
-  background-color: #15a98c;
   color: #f5f5f5;
-  font: 19px/32px "Georgia", serif;
-  display: block;
   cursor: pointer;
+  font: 19px/32px Georgia, serif;
+  height: 50px;
   outline: none;
+  width: 220px;
 }
 
 .clear-fix 
@@ -282,48 +275,44 @@ body
 
 .content__title_center 
 {
-  width: 300px;
+  color: #333;
   margin: auto;
-  text-align: center;
-  font-size: 36px;
-  line-height: 42px;
-  color: #333333;
-  font-weight: 300;
-  font-family: "Open Sans";
   position: relative;
+  text-align: center;
+  width: 300px;
+  font: 300 36px/42px "Open Sans", sans-serif;
+  text-transform: uppercase;
 }
 
 .content__title_center::before 
 {
-  content: "";
   border-bottom: 1px solid #c4c4c4;
-  width: 195px;
+  content: "";
   height: 6px;
-  display: block;
-  position: absolute;
   left: -195px;
+  position: absolute;
   top: 15px;
+  width: 195px;
 }
 
 .content__title_center::after 
 {
-  content: "";
   border-bottom: 1px solid #c4c4c4;
-  width: 195px;
+  content: "";
   height: 6px;
-  display: block;
-  position: absolute;
   left: 300px;
+  position: absolute;
   top: 15px;
+  width: 195px;
 }
 
 .form 
 {
-  margin: 68px auto 0;
-  width: 540px;
-  padding-left: 16px;
   display: flex;
   flex-direction: column;
+  margin: 68px auto 0;
+  padding-left: 16px;
+  width: 540px;
 }
 
 .form__field 
@@ -335,19 +324,19 @@ body
 
 .field__label 
 {
-  color: #333333;
+  color: #333;
   font: 20px/32px "Open Sans", sans-serif;
   margin-bottom: 3px;
 }
 
 .field__input 
 {
-  border-radius: 3px;
   border: 2px solid #c9c9c9;
-  padding: 11px;
-  outline: none;
+  border-radius: 3px;
+  color: #555;
   font: 400 18px "Open Sans", sans-serif;
-  color: #555555;
+  outline: none;
+  padding: 11px;
 }
 
 .field__input:focus 
@@ -357,36 +346,38 @@ body
 
 .field__label_important::after 
 {
+  color: red;
   content: "*";
   display: inline-block;
-  color: red;
   margin-left: 5px;
 }
 
 .field__select 
 {
-  position: relative;
-  height: 50px;
   display: block;
+  height: 50px;
+  position: relative;
+  appearance: none;
+  background: no-repeat url('../img/arrow_down.png') right;
 }
 
 .form__radio 
 {
-  margin: 16px 0px 32px;
+  margin: 16px 0 32px;
 }
 
 .radio-box 
 {
+  color: #333;
   display: flex;
+  font-family: "Open Sans";
   font-size: 18px;
   line-height: 32px;
-  color: #333333;
-  font-family: "Open Sans";
 }
 
 .radio-box__item 
 {
-  margin: 12px 8px 12px 0px;
+  margin: 12px 8px 12px 0;
 }
 
 .radio-box__label 
@@ -396,8 +387,8 @@ body
 
 .field__input_multiline 
 {
-  resize: none;
   height: 125px;
+  resize: none;
 }
 
 .form__button 
