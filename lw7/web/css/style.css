@@ -395,3 +395,28 @@ body
 {
   margin-top: 24px;
 }
+
+.error
+{
+  color: #f17373;
+  border: 1px solid #f17373;
+  margin: 0 0 16px 0;
+  padding: 16px;
+  background: #f5c4c4;
+  border-radius: 4px;
+}
+
+.information
+{
+  color: #3da75d;
+  border: 1px solid #3da75d;
+  margin: 0 0 16px 0;
+  padding: 16px;
+  background: #c2f5d1;
+  border-radius: 4px;
+}
+
+.message 
+{
+  margin-bottom: 32px;
+}

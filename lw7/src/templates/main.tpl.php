@@ -113,18 +113,18 @@
         <form class="form" method="POST">
           <div class="form__field field">
             <label for="name" class="field__label field__label_important">Ваше имя</label>
-            <input type="text" name="name" class="field__input" value="<? echo $args['name'] ?? ''; ?>" />
+            <input type="text" name="name" class="field__input" value="<? echo $args["data"]["name"] ?? ''; ?>" />
           </div>
-          <? if (isset($args['name_error_msg'])): ?>
-            <p><? echo $args['name_error_msg']; ?></p>
+          <? if (isset($args["errors"]["name_error_msg"])): ?>
+            <p class="error"><? echo $args["errors"]["name_error_msg"]; ?></p>
           <? endif; ?>
 
           <div class="form__field field">
             <label for="email" class="field__label field__label_important">Ваш email</label>
-            <input type="text" name="email" class="field__input" value="<? echo $args['email'] ?? ''; ?>" />
+            <input type="text" name="email" class="field__input" value="<? echo $args["data"]["email"] ?? ''; ?>" />
           </div>
-          <? if (isset($args['email_error_msg'])): ?>
-            <p><? echo $args['email_error_msg']; ?></p>
+          <? if (isset($args["errors"]["email_error_msg"])): ?>
+            <p class="error"><? echo $args["errors"]["email_error_msg"]; ?></p>
           <? endif; ?>
 
           <div class="form__field field">
@@ -147,10 +147,16 @@
 
           <div class="form__field field">
             <label for="your-message" class="field__label field__label_important">Ваше сообщение</label>
-            <textarea id="your-message" class="field__input field__input_multiline" name="message" value="<? echo $args['message'] ?? ''; ?>"></textarea>
+            <textarea id="your-message" class="field__input field__input_multiline" name="message">
+              <? echo $args["data"]["message"] ?? ''; ?>
+            </textarea>
           </div>
-          <? if (isset($args['message_error_msg'])): ?>
-            <p><? echo $args['message_error_msg']; ?></p>
+          <? if (isset($args["errors"]["message_error_msg"])): ?>
+            <p class="error"><? echo $args["errors"]["message_error_msg"]; ?></p>
+          <? endif; ?>
+
+          <? if (isset($args["info"])): ?>
+            <p class="information"><? echo $args["info"]; ?></p>
           <? endif; ?>
 
           <input class="button form__button" value="Отправить" type="submit" />
