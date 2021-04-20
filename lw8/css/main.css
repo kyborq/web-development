@@ -1,0 +1,46 @@
+body
+{
+  margin: 0;
+}
+
+.flex-container
+{
+  height: 100vh;
+  display: flex;
+}
+
+.centered-card
+{
+  margin: auto;
+}
+
+.card-title
+{
+  text-align: center;
+}
+
+.card-form
+{
+  display: flex;
+  width: 450px;
+}
+
+.card-field
+{
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+}
+
+.card-button
+{
+  padding: 16px;
+  margin-left: 16px;
+}
+
+#result {
+  display: block;
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}

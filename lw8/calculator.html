@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="flex-container">
+    <div class="centered-card">
+      <h1 class="card-title">Calculations</h1>
+      <div class="card-form">
+        <input type="text" class="card-field" id="expression">
+        <button class="card-button" id="solve">Solve</button>
+      </div>
+      <span class="card-text" id="result"></span>
+    </div>
+  </div>
+  <script src="js/calculator.js"></script>
+  <script src="js/domOutput.js"></script>
+  <script>
+    const button = document.querySelector("#solve");
+    button.onclick = function() {
+      const expression = getValue("expression");
+      setText("result", calculate(expression));
+    }
+  </script>
+</body>
+</html>

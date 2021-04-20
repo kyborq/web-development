@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Is prime nummber</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="flex-container">
+    <div class="centered-card">
+      <h1 class="card-title">Prime number check</h1>
+      <div class="card-form">
+        <input type="text" class="card-field" id="number">
+        <button class="card-button" id="check">Check</button>
+      </div>
+      <span class="card-text" id="result"></span>
+    </div>
+  </div>
+  <script src="js/isPrimeNumber.js"></script>
+  <script src="js/domOutput.js"></script>
+  <script>
+    const button = document.querySelector("#check");
+    button.onclick = function() {
+      const number = parseInt(getValue("number"));
+      setText("result", isPrimeNumber(number));
+    }
+  </script>
+</body>
+</html>
