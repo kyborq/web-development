@@ -1,15 +1,17 @@
 <?
 
-function checkFormData(array $fields, array &$errors): bool 
+function checkFormData(array $fields): array 
 {
+    $errors = [];
+    
     if (empty($fields["name"])) 
     {
-        $errors["name_error_msg"] = "Имя введено неверно!";
+        $errors["name_error_msg"] = "Введите имя!";
     }
 
     if (empty($fields["email"])) 
     {
-        $errors["email_error_msg"] = "Электронная почта введена неверно!";
+        $errors["email_error_msg"] = "Введите электронную почту!";
     }
 
     if (empty($fields["message"])) 
@@ -20,9 +22,7 @@ function checkFormData(array $fields, array &$errors): bool
     return $errors;
 }
 
-// TODO: Add feututrewjri.FLWDG,NSDHFLDA'HG
-
-function getFormData() 
+function getFormData(): array 
 {
     $fields = [
         "name" => getPostParameter("name"),
@@ -32,11 +32,37 @@ function getFormData()
         "message" => getPostParameter("message")
     ];
     
-    return $fields;
+    $fieldErrors = checkFormData($fields);
+    
+    $form = [
+        "data" => $fields,
+        "errors" => $fieldErrors
+    ];
+
+    return $form;
 }
 
 function saveFeedbackData()
 {
     $form = getFormData();
-    var_dump($form);
+
+    if (!$form["errors"] && $form["data"]) 
+    {
+        $dir = "data/";
+        $file = $form["data"]["email"] . ".txt";
+
+        if (!file_exists($dir)) {
+            mkdir($dir);
+        }
+
+        file_put_contents($dir . $file, json_encode($form["data"], JSON_UNESCAPED_UNICODE));
+
+        renderTemplate("main.tpl.php", [
+            "info" => "Сообщение сохранено!"
+        ]);
+    }
+    else
+    {
+        renderTemplate("main.tpl.php", $form);
+    }
 }
