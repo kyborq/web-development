@@ -1,20 +1,21 @@
 <?
 
-function feedbackListPage(): void 
+function getFeedbackData(): void
 {
-    $dir = 'data/';
-    $files = scandir($dir);
-    $messages = [];
+    $email = getPostParameter("email");
+    $filePath = "data/${email}.txt";
+    $message = [];
 
-    foreach ($files as $value) {
-        $file = explode(".", $value);
-        $path = $dir . $value;
-
-        if ($file[1] === "txt" && file_exists($path)) {
-            $data = json_decode(file_get_contents($path), true);
-            array_push($messages, $data);
-        }
+    $message["error"] = "Отправитель с данным email не найден";
+    if (file_exists($filePath)) 
+    {
+        $message = json_decode(file_get_contents($filePath), true);
     }
 
-    renderTemplate("feedbacks.tpl.php", $messages);
+    feedbackListPage($message);
+}
+
+function feedbackListPage(array $args = []): void
+{
+    renderTemplate("feedbacks.tpl.php", $args);
 }

@@ -9,17 +9,17 @@ function isPrimeNumber(num)
     {
       const number = num[i];
       const prime = primeNumber(number);
-      return `Результат: ${number} is ${!prime ? "not " : ""}prime number`;
+      console.log( `Результат: ${number} is ${!prime ? "not " : ""}prime number`);
     }
   }
 
   if (isNumber)
   {
     const prime = primeNumber(num);
-    return `Результат: ${num} is ${!prime ? "not " : ""}prime number`;
+    console.log( `Результат: ${num} is ${!prime ? "not " : ""}prime number`);
   }
 
-  if (!isArray && !isNumber) return("Параметр не является ни числом ни массивом!");
+  if (!isArray && !isNumber) console.log("Параметр не является ни числом ни массивом!");
 }
 
 function primeNumber(num)
@@ -35,7 +35,8 @@ function primeNumber(num)
   return true;
 }
 
-console.log(isPrimeNumber(3));
-console.log(isPrimeNumber(4));
-console.log(isPrimeNumber([3, 4, 5]));
-console.log(isPrimeNumber("4"));
+isPrimeNumber(3);
+isPrimeNumber(4);
+isPrimeNumber([3, 4, 5]);
+// isPrimeNumber([3, 4, 5, 6, 7, 8 ,]);
+isPrimeNumber("4");

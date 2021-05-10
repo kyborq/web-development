@@ -21,16 +21,26 @@
     <div class="section">
       <div class="section__content">
         <h2 class="content__title content__title_center">Сообщения</h2>
+        <form class="form" method="POST">
+          <div class="form__field field">
+            <label for="email" class="field__label field__label_important">Введите email</label>
+            <input type="text" name="email" class="field__input" />
+          </div>
+          <input class="button form__button" value="Отправить" type="submit" />
+        </form>
 
         <div class="content__messages">
-          <? foreach ($args as $user): ?>
-            <div class="message">
-              <p><? echo $user["name"] ?></p>
-              <p><? echo $user["country"] . ", " . $user["gender"]; ?></p>
-              <p><? echo $user["email"] ?></p>
-              <p><? echo $user["message"] ?></p>
-            </div>
-          <? endforeach; ?>
+          <? if (isset($args["error"])): ?>
+            <p class="error"><? echo $args["error"]; ?></p>
+          <? endif; ?>
+          <? if (isset($args) && !isset($args["error"])): ?>
+            <? foreach ($args as $key => $value): ?>
+              <div class="message">
+                <p><? echo $key ?></p>
+                <p><? echo $value ?></p>
+              </div>
+            <? endforeach; ?>
+          <? endif; ?>
         </div>
       </div>
     </div>

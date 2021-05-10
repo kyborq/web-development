@@ -2,4 +2,11 @@
 
 include "../src/common.inc.php";
 
-feedbackListPage();
+if (getRequestMethod() === "POST")
+{
+    getFeedbackData();
+}
+else
+{
+    feedbackListPage();
+}

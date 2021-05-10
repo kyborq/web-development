@@ -50,3 +50,4 @@ console.log(calculate("+ 1 2"));
 console.log(calculate("+ 1 (+ 2 3)"));
 console.log(calculate("+ (- 2 1) (+ 3 4)"));
 console.log(calculate("+ 1 (+ 2 (+ (+ 3 4) 5))"));
+console.log(calculate("* 2 (+ 5 1)")); 

@@ -69,16 +69,19 @@
     <div class="section section_gray">
       <div class="section__content">
         <h2 class="content__title">Любимые фильмы</h2>
-        <div class="movies">
-          <div class="movies__item movie">
-            <img src="img/film_showshenk.png" alt="" class="movie__image" />
+        <div class="flex-container">
+          <button class="slider__button" id="btn-prev"><img src="img/left_arrow.png" alt=""></button>
+          
+          <div class="movies" id="carousel">
+            <div class="movies__item movie">
+              <img src="img/film_showshenk.png" alt="" class="movie__image" />
             <h3 class="movie__title">Побег из Шоушенка</h3>
             <p class="movie__description">
               Успешный банкир Энди Дюфрейн обвинен в убийстве собственной жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решетки. Каждый, кто попадает в эти стены,
               становится их рабом до конца жизни. Но Энди, вооруженный живым умом и доброй душой, отказывается мириться с приговором судьбы и начинает разрабатывать невероятно дерзкий план своего освобождения.
             </p>
           </div>
-
+          
           <div class="movies__item movie">
             <img src="img/film_narcos.png" alt="" class="movie__image" />
             <h3 class="movie__title">Наркоз</h3>
@@ -104,11 +107,14 @@
               пространстве без всякой связи с Землей и какой-либо надежды на спасение.
             </p>
           </div>
+
+        </div>
+        <button class="slider__button" id="btn-next"><img src="img/right_arrow.png" alt=""></button>
         </div>
       </div>
-      <button class="button">Все фильмы</button>
+      <button class="button" id="btn-next">Все фильмы</button>
     </div>
-
+    
     <div class="section">
       <div class="section__content">
         <h2 class="content__title content__title_center">НАПИШИ МНЕ</h2>
@@ -150,6 +156,7 @@
       <p class="footer__text">© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»</p>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/burger.js"></script>
+    <script src="./js/carousel.js"></script>
   </body>
 </html>
