@@ -1,25 +1,25 @@
 -- Студент
 CREATE TABLE `Student` (
-    StudentID INT          AUTO_INCREMENT NOT NULL,
-    LastName  VARCHAR(255) NOT NULL,
-    FirstName VARCHAR(255) NOT NULL,
-    Age       INT          NOT NULL,
-    GroupID   INT          NOT NULL,
-    PRIMARY KEY(StudentID)
+    id         INT          AUTO_INCREMENT NOT NULL,
+    last_name  VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    age        INT          NOT NULL,
+    group_id   INT          NOT NULL,
+    PRIMARY KEY(id)
 );
 
 -- Группа
 CREATE TABLE `Group` (
-    GroupID   INT          AUTO_INCREMENT NOT NULL,
-    Name      VARCHAR(255) NOT NULL,
-    FacultyID INT          NOT NULL,
-    PRIMARY KEY(GroupID)
+    id         INT          AUTO_INCREMENT NOT NULL,
+    group_name VARCHAR(255) NOT NULL,
+    faculty_id INT          NOT NULL,
+    PRIMARY KEY(id)
 );
 
 -- Факультет
 CREATE TABLE `Faculty` (
-    FacultyID INT          AUTO_INCREMENT NOT NULL,
-    Name      VARCHAR(255) NOT NULL,
-    PRIMARY KEY(FacultyID)
+    id           INT          AUTO_INCREMENT NOT NULL,
+    faculty_name VARCHAR(255) NOT NULL,
+    PRIMARY KEY(id)
 );
 
