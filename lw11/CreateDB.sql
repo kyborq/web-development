@@ -1,5 +1,5 @@
 -- Студент
-CREATE TABLE `Student` (
+CREATE TABLE `student` (
     id         INT          AUTO_INCREMENT NOT NULL,
     last_name  VARCHAR(255) NOT NULL,
     first_name VARCHAR(255) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE `Student` (
 );
 
 -- Группа
-CREATE TABLE `Group` (
+CREATE TABLE `group` (
     id         INT          AUTO_INCREMENT NOT NULL,
     group_name VARCHAR(255) NOT NULL,
     faculty_id INT          NOT NULL,
@@ -17,9 +17,8 @@ CREATE TABLE `Group` (
 );
 
 -- Факультет
-CREATE TABLE `Faculty` (
+CREATE TABLE `faculty` (
     id           INT          AUTO_INCREMENT NOT NULL,
     faculty_name VARCHAR(255) NOT NULL,
     PRIMARY KEY(id)
 );
-
