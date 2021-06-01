@@ -1,71 +1,71 @@
 -- Добавление факультетов
-INSERT INTO faculty SET faculty_name = `ФИиВТ`;
-INSERT INTO faculty SET faculty_name = `РТФ`;
-INSERT INTO faculty SET faculty_name = `ЭФ`;
+INSERT INTO faculty (faculty_name) VALUES ('ФИиВТ');
+INSERT INTO faculty (faculty_name) VALUES ('РТФ');
+INSERT INTO faculty (faculty_name) VALUES ('ЭФ');
 
 -- Добавление групп
-INSERT INTO `group` SET group_name = `ПС-11`, faculty_id = 1;
-INSERT INTO `group` SET group_name = `ПС-12`, faculty_id = 1;
-INSERT INTO `group` SET group_name = `ПС-13`, faculty_id = 1;
-INSERT INTO `group` SET group_name = `ИТС-11`, faculty_id = 2;
-INSERT INTO `group` SET group_name = `ИТС-12`, faculty_id = 2;
-INSERT INTO `group` SET group_name = `ИТС-13`, faculty_id = 2;
-INSERT INTO `group` SET group_name = `ЛСД-11`, faculty_id = 3;
-INSERT INTO `group` SET group_name = `ЛСД-12`, faculty_id = 3;
-INSERT INTO `group` SET group_name = `ЛСД-13`, faculty_id = 3;
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ПС-11', 1);
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ПС-12', 1);
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ПС-13', 1);
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ИТС-11', 2);
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ИТС-12', 2);
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ИТС-13', 2);
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ЛСД-11', 3);
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ЛСД-12', 3);
+INSERT INTO `group` (group_name, faculty_id) VALUES ('ЛСД-13', 3);
 
 -- Добавление студентов
 -- ПС-11
-INSERT INTO `student` SET first_name = `Константин`, last_name = `Подыганов`, age = 20, group_id = 1;
-INSERT INTO `student` SET first_name = `Максим`, last_name = `Прозоров`, age = 69, group_id = 1;
-INSERT INTO `student` SET first_name = `Мария`, last_name = `Усынина`, age = 19, group_id = 1;
-INSERT INTO `student` SET first_name = `Артём`, last_name = `Першуткин`, age = 0, group_id = 1;
-INSERT INTO `student` SET first_name = `Татьяна`, last_name = `Фадеева`, age = 17, group_id = 1;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Константин', 'Подыганов', 20, 1);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Максим', 'Прозоров', 69, 1);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Мария', 'Усынина', 19, 1);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Артём', 'Першуткин', 0, 1);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Татьяна', 'Фадеева', 17, 1);
 -- ПС-12
-INSERT INTO `student` SET first_name = `Никита`, last_name = `Зыков`, age = 16, group_id = 2;
-INSERT INTO `student` SET first_name = `Сергей`, last_name = `Патрушев`, age = 18, group_id = 2;
-INSERT INTO `student` SET first_name = `Марина`, last_name = `Макарова`, age = 19, group_id = 2;
-INSERT INTO `student` SET first_name = `Даниил`, last_name = `Пырков`, age = 17, group_id = 2;
-INSERT INTO `student` SET first_name = `Анастасия`, last_name = `Седёлкина`, age = 20, group_id = 2;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Никита', 'Зыков', 16, 2);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Сергей', 'Патрушев', 18, 2);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Марина', 'Макарова', 19, 2);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Даниил', 'Пырков', 17, 2);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Анастасия', 'Седёлкина', 20, 2);
 -- ПС-13
-INSERT INTO `student` SET first_name = `Евгений`, last_name = `Федосеев`, age = 16, group_id = 3;
-INSERT INTO `student` SET first_name = `Адель`, last_name = `Сибгатуллин`, age = 18, group_id = 3;
-INSERT INTO `student` SET first_name = `Павел`, last_name = `Волков`, age = 19, group_id = 3;
-INSERT INTO `student` SET first_name = `Владислав`, last_name = `Соков`, age = 17, group_id = 3;
-INSERT INTO `student` SET first_name = `Кирилл`, last_name = `Санников`, age = 20, group_id = 3;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Евгений', 'Федосеев', 16, 3);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Адель', 'Сибгатуллин', 18, 3);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Павел', 'Волков', 19, 3);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Владислав', 'Соков', 17, 3);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Кирилл', 'Санников', 20, 3);
 -- ИТС-11
-INSERT INTO `student` SET first_name = `Мария`, last_name = `Андреева`, age = 24, group_id = 4;
-INSERT INTO `student` SET first_name = `Ян`, last_name = `Серов`, age = 24, group_id = 4;
-INSERT INTO `student` SET first_name = `Степан`, last_name = `Панкратов`, age = 24, group_id = 4;
-INSERT INTO `student` SET first_name = `Маргарита`, last_name = `Глушкова`, age = 24, group_id = 4;
-INSERT INTO `student` SET first_name = `Софья`, last_name = `Федотова`, age = 22, group_id = 4;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Мария', 'Андреева', 24, 4);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Ян', 'Серов', 24, 4);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Степан', 'Панкратов', 24, 4);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Маргарита', 'Глушкова', 24, 4);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Софья', 'Федотова', 22, 4);
 -- ИТС-12
-INSERT INTO `student` SET first_name = `Теона`, last_name = `Семенова`, age = 20, group_id = 5;
-INSERT INTO `student` SET first_name = `Михаил`, last_name = `Данилов`, age = 16, group_id = 5;
-INSERT INTO `student` SET first_name = `Дарья`, last_name = `Гончарова`, age = 19, group_id = 5;
-INSERT INTO `student` SET first_name = `Роман`, last_name = `Соловьев`, age = 20, group_id = 5;
-INSERT INTO `student` SET first_name = `Роман`, last_name = `Агафонов`, age = 21, group_id = 5;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Теона', 'Семенова', 20, 5);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Михаил', 'Данилов', 16, 5);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Дарья', 'Гончарова', 19, 5);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Роман', 'Соловьев', 20, 5);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Роман', 'Агафонов', 21, 5);
 -- ИТС-13
-INSERT INTO `student` SET first_name = `Виктория`, last_name = `Титова`, age = 19, group_id = 6;
-INSERT INTO `student` SET first_name = `Даниэль`, last_name = `Блинов`, age = 22, group_id = 6;
-INSERT INTO `student` SET first_name = `Глеб`, last_name = `Сидоров`, age = 21, group_id = 6;
-INSERT INTO `student` SET first_name = `Елизавета`, last_name = `Морозова`, age = 16, group_id = 6;
-INSERT INTO `student` SET first_name = `Наталья`, last_name = `Софронова`, age = 17, group_id = 6;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Виктория', 'Титова', 19, 6);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Даниэль', 'Блинов', 22, 6);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Глеб', 'Сидоров', 21, 6);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Елизавета', 'Морозова', 16, 6);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Наталья', 'Софронова', 17, 6);
 -- ЛСД-11
-INSERT INTO `student` SET first_name = `Мария`, last_name = `Соловьева`, age = 20, group_id = 7;
-INSERT INTO `student` SET first_name = `Алиса`, last_name = `Сахарова`, age = 21, group_id = 7;
-INSERT INTO `student` SET first_name = `Глеб`, last_name = `Константинов`, age = 17, group_id = 7;
-INSERT INTO `student` SET first_name = `Артемий`, last_name = `Петров`, age = 22, group_id = 7;
-INSERT INTO `student` SET first_name = `Злата`, last_name = `Григорьева`, age = 19, group_id = 7;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Мария', 'Соловьева', 20, 7);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Алиса', 'Сахарова', 21, 7);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Глеб', 'Константинов', 17, 7);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Артемий', 'Петров', 22, 7);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Злата', 'Григорьева', 19, 7);
 -- ЛСД-12
-INSERT INTO `student` SET first_name = `Назар`, last_name = `Иванов`, age = 19, group_id = 8;
-INSERT INTO `student` SET first_name = `Айша`, last_name = `Олейникова`, age = 20, group_id = 8;
-INSERT INTO `student` SET first_name = `Степан`, last_name = `Комаров`, age = 18, group_id = 8;
-INSERT INTO `student` SET first_name = `Екатерина`, last_name = `Карпова`, age = 18, group_id = 8;
-INSERT INTO `student` SET first_name = `Ксения`, last_name = `Белякова`, age = 19, group_id = 8;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Назар', 'Иванов', 19, 8);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Айша', 'Олейникова', 20, 8);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Степан', 'Комаров', 18, 8);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Екатерина', 'Карпова', 18, 8);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Ксения', 'Белякова', 19, 8);
 -- ЛСД-13
-INSERT INTO `student` SET first_name = `Елизавета`, last_name = `Денисова`, age = 20, group_id = 9;
-INSERT INTO `student` SET first_name = `Дарья`, last_name = `Гаврилова`, age = 22, group_id = 9;
-INSERT INTO `student` SET first_name = `София`, last_name = `Кузьмина`, age = 16, group_id = 9;
-INSERT INTO `student` SET first_name = `Алиса`, last_name = `Грекова`, age = 22, group_id = 9;
-INSERT INTO `student` SET first_name = `Максим`, last_name = `Степанов`, age = 21, group_id = 9;
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Елизавета', 'Денисова', 20, 9);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Дарья', 'Гаврилова', 22, 9);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('София', 'Кузьмина', 16, 9);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Алиса', 'Грекова', 22, 9);
+INSERT INTO student (first_name, last_name, age, group_id) VALUES ('Максим', 'Степанов', 21, 9);
